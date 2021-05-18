@@ -61,17 +61,16 @@ own_window_title = 'arcolinux Top Conky',
 --## Use: own_window_type normal
 --## Use: own_window_transparent no
 --## Valid range is 0-255, where 0 is 0% opacity, and 255 is 100% opacity.
--- own_window_argb_value 50
+-- own_window_argb_value 10
 
-minimum_width = 400,
+minimum_width = 350,
 minimum_height = 240,
-maximum_width = 400,
+maximum_width = 350,
 
-gap_x = -55,--## left | right
-gap_y = -15,--## up | down
+gap_x =24,--## left | right
+gap_y = 0,--## up | down
 
-alignment = 'mm',
---#alignment = 'bottom_left',
+alignment = 'bottom_left',
 --######################  End Window Settings  ###
 --##  Font Settings  #############################
 -- Use Xft (anti-aliased font and stuff)
@@ -86,7 +85,7 @@ xftalpha = 1,
 -- Force UTF8? requires XFT ###
 override_utf8_locale = true,
 
-uppercase = false,
+uppercase = true,
 --########################  End Font Settings  ###
 --##  Colour Settings  ###########################
 draw_shades = false,--yes
@@ -168,8 +167,9 @@ update_interval = 1,
 };
 
 conky.text = [[
-${font Roboto:Bold:size=72}${color0}\
-${goto 20}${offset 40}${time %H}${color}\
+${goto 20}${image ~/.config/conky/syclo/images/bg/bg-bottomleft.png -p 0,0 -s 380x240}\
+${font Roboto:Light:size=72}${color0}\
+${time %H}${color}\
 \
 \
 :\
@@ -182,6 +182,12 @@ ${time %M}${font}${color}
 \
 ${goto 20}${font Roboto:Light:size=24}${voffset 12}${execi 300 LANG=${template9} LC_TIME=${template9} date +"%A"},${color}\
 ${color0} ${execi 300 LANG=${template9} LC_TIME=${template9} date +"%d"}${color}\
-${execi 300 LANG=${template9} LC_TIME=${template9} date +"%B"}${font}${color}
+ ${execi 300 LANG=${template9} LC_TIME=${template9} date +"%B"}${font}${color}
+\
 
+${goto 24}\
+${font Roboto:Light:pixelsize=12}\
+${image ~/.config/conky/syclo/images/crimson/hdd.png -p 15,158 -s 16x16} ${offset 14}${fs_used /} / ${fs_size /}\
+${offset 30}${image ~/.config/conky/syclo/images/crimson/ram.png -p 125,158 -s 16x16} ${offset 9}$mem / $memmax\
+${offset 30}${image ~/.config/conky/syclo/images/crimson/cpu.png -p 240,158 -s 16x16} ${offset 9}${cpu cpu0}%
 ]];

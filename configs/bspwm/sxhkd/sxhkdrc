@@ -7,6 +7,13 @@
 # SUPER + ... KEYS
 #################################################################
 
+# pavolumue
+super + v
+	pavucontrol&
+# gedit
+super + g
+	gedit&
+
 # whatsapp
 super + w
 	whatsapp-nativefier
@@ -21,24 +28,27 @@ super + s
     spotify
 
 
-#Rofi
+#Rofi drun
 super + c
     rofi -show drun
 
+# Rofi run
+super + z
+	rofi -show run
 
 #arcolinux-logout
 super + x
     arcolinux-logout
 
 #Urxvt
-super + t
-    urxvt
+#super + t
+#    urxvt
 
 
 
 #alacritty
 super + Return
-    alacritty
+	alacritty  
 
 #Xkill
 super + Escape
@@ -50,13 +60,12 @@ super + Escape
 
 #File-Manager
 super + shift + Return
-    thunar
+    nautilus
 
 
 #reload sxhkd:
 super + shift + s
     pkill -USR1 -x sxhkd
-
 
 #################################################################
 # ALT + ... KEYS
@@ -107,11 +116,11 @@ F12
 
 #Raises volume
 XF86AudioRaiseVolume
-    amixer set Master 5%+
+    amixer set Master 10%+
 
 #Lowers volume
 XF86AudioLowerVolume
-    amixer set Master 5%-
+    amixer set Master 10%-
 
 #Mute
 XF86AudioMute
@@ -144,11 +153,11 @@ XF86AudioStop
 
 #Brightness up
 XF86MonBrightnessUp
-    xbacklight -inc 10
+    brightnessctl set 10%+
 
 #Brightness down
 XF86MonBrightnessDown
-    xbacklight -dec 10
+    brightnessctl set 10%-
 
 #########################
 #        POLYBAR        #
@@ -194,7 +203,7 @@ super + Tab
     bspc desktop -f '^{1-9,10}'
 
 # Increase/decrease window gap on focused desktop
-super + bracket{left,right}
+ctrl + bracket{left,right}
     bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
 
 # set the window state

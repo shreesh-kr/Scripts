@@ -63,14 +63,23 @@ case $desktop in
     polybar --reload mainbar-bspwm -c ~/.config/polybar/config &
     fi
     # second polybar at bottom
-    # if type "xrandr" > /dev/null; then
-    #   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-    #     MONITOR=$m polybar --reload mainbar-bspwm-extra -c ~/.config/polybar/config &
-    #   done
+  #  if type "xrandr" > /dev/null; then
+     #  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+        # MONITOR=$m polybar --reload mainbar-bspwm-extra -c ~/.config/polybar/config &
+       #done
     # else
     # polybar --reload mainbar-bspwm-extra -c ~/.config/polybar/config &
-    # fi
+     #fi
+     # third polybar mid
+   #  if type "xrandr" > /dev/null; then
+      # for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+         #MONITOR=$m polybar --reload midbar-bspwm-extra -c ~/.config/polybar/config &
+       #done
+     #else
+     #polybar --reload midbar-bspwm-extra -c ~/.config/polybar/config &
+     #fi
     ;;
+    
 
     herbstluftwm|/usr/share/xsessions/herbstluftwm)
     if type "xrandr" > /dev/null; then
