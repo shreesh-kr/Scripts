@@ -1,0 +1,27 @@
+#!/usr/bin/bash
+
+
+BOLD=$(tput bold)
+NORMAL=$(tput sgr0)
+
+echo "${BOLD}Running Maintainence Script${NORMAL}"
+
+
+
+echo "${BOLD} Updating List${NORMAL}"
+sudo apt-get update
+
+echo "${BOLD} Upgrading Packages${NORMAL}"
+sudo apt-get upgrade
+
+echo "${BOLD} Upgrading Dist${NORMAL}"
+sudo apt dist-upgrade
+
+echo "${BOLD} Running Autoremove${NORMAL}"
+sudo apt autoremove
+
+echo "${BOLD} Fixing Broken Packages${NORMAL}"
+sudo apt --fix-broken install
+
+echo "${BOLD} Clearing Caches${NORMAL}"
+sudo apt clean
