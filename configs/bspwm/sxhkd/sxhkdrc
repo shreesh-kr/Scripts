@@ -8,11 +8,11 @@
 
 # Vivaldi
 #super + F1
-#	vivaldi-stable
+#   vivaldi-stable
 
 # Atom
 #super + F2
-#	atom
+#   atom
 
 #Inkscape
 #super + F3
@@ -51,7 +51,7 @@ super + s
 #    rofi -show drun -fullscreen
 
 #Rofi
-super + space
+super + c
     rofi -show drun
 
 #################################################################
@@ -64,11 +64,11 @@ super + space
 
 #Browser
 ##super + w
-    vivaldi-stable
+ #   vivaldi-stable
 
 #Conky-toggle
 ##super + c
-    conky-toggle
+#    conky-toggle
 
 #Htop
 #super + h
@@ -83,8 +83,8 @@ super + x
 #    rofi-theme-selector
 
 #Urxvt
-#super + t
-#    urxvt
+super + t
+    urxvt
 
 #Pavucontrol
 #super + v
@@ -96,7 +96,7 @@ super + x
 
 #urxvt
 super + Return
-    urxvt
+    alacritty
 
 #Xkill
 super + Escape
@@ -105,7 +105,7 @@ super + Escape
 #Keyboard dependent
 #urxvt
 #super + KP_Enter
-#	urxvt
+#   urxvt
 
 #################################################################
 # SUPER + SHIFT KEYS
@@ -113,24 +113,24 @@ super + Escape
 
 #File-Manager
 super + shift + Return
-	thunar
+    thunar
 
 #Keyboard dependent
 #File-Manager
 #super + shift + KP_Enter
-#	thunar
+#   thunar
 
 #dmenu
 #super + shift + d
-#	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+#   dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
 
 #reload sxhkd:
 super + shift + s
-	pkill -USR1 -x sxhkd
+    pkill -USR1 -x sxhkd
 
 #Keyboard dependent
 #super + shift + KP_Enter
-#	thunar
+#   thunar
 
 
 #################################################################
@@ -338,11 +338,11 @@ F12
 
 #Raises volume
 XF86AudioRaiseVolume
-    amixer set Master 10%+
+    amixer set Master 5%+
 
 #Lowers volume
 XF86AudioLowerVolume
-    amixer set Master 10%-
+    amixer set Master 5%-
 
 #Mute
 XF86AudioMute
@@ -375,11 +375,11 @@ XF86AudioStop
 
 #Brightness up
 XF86MonBrightnessUp
-    xbacklight -inc 10
+    xbacklight -inc 5
 
 #Brightness down
 XF86MonBrightnessDown
-    xbacklight -dec 10
+    xbacklight -dec 5
 
 #########################
 #        POLYBAR        #
@@ -409,15 +409,15 @@ ctrl + alt + o
 
 #Toggle fullscreen of window
 super + f
-	bspc node --state \~fullscreen
+    bspc node --state \~fullscreen
 
 # Toggle pseudo tiling of window
 super + p
-	bspc node --state \~pseudo_tiled
+    bspc node --state \~pseudo_tiled
 
 #kill
 super + q
-	bspc node -c
+    bspc node -c
 
 #################################################################
 # SUPER KEYS
@@ -425,19 +425,19 @@ super + q
 
 #Focus selected desktop
 super + Tab
-	bspc desktop -f '^{1-9,10}'
+    bspc desktop -f '^{1-9,10}'
 
 # Increase/decrease window gap on focused desktop
 super + bracket{left,right}
-	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
+    bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
 
 # set the window state
 super + space
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+    bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # Move focus to other monitor
 super + BackSpace
-		bspc monitor -f next
+        bspc monitor -f next
 
 #################################################################
 # SUPER + ALT KEYS
@@ -445,7 +445,7 @@ super + BackSpace
 
 # Move floating window
 super + alt + {_,shift + }{Left,Down,Up,Right}
-	~/.config/bspwm/scripts/move-window {_,edge-}{west,south,north,east}
+    ~/.config/bspwm/scripts/move-window {_,edge-}{west,south,north,east}
 
 #################################################################
 # SUPER + CONTROL KEYS
@@ -453,7 +453,7 @@ super + alt + {_,shift + }{Left,Down,Up,Right}
 
 # Cancel preselection
 super + ctrl + space
-	bspc node --presel-dir cancel
+    bspc node --presel-dir cancel
 
 #################################################################
 # SUPER + SHIFT KEYS
@@ -462,39 +462,39 @@ super + ctrl + space
 
 #Reload bspwm
 super + shift + r
-	~/.config/bspwm/bspwmrc
+    ~/.config/bspwm/bspwmrc
 
 #kill
 super + shift + q
-	bspc node -c
+    bspc node -c
 
 #Logout
 #super + shift + x
-#	bspc quit
+#   bspc quit
 
 # Focus/swap windows by direction
 super + {_,shift + }{h,j,k,l}
-	bspc node --{focus,swap} {west,south,north,east}
+    bspc node --{focus,swap} {west,south,north,east}
 
 # Flip layout vertically/horizontally
 super + {_,shift + }a
-	bspc node @/ --flip {vertical,horizontal}
+    bspc node @/ --flip {vertical,horizontal}
 
 # Move focused window to other monitor
 super + shift + Left
-	bspc node -m next --follow
+    bspc node -m next --follow
 
 # Move focused window to other monitor
 super + shift + Right
-		bspc node -m next --follow
+        bspc node -m next --follow
 
 # Move focused window to other monitor
 super + shift + Up
-	bspc node -m next --follow
+    bspc node -m next --follow
 
 # Move focused window to other monitor
 super + shift + Down
-		bspc node -m next --follow
+        bspc node -m next --follow
 
 #################################################################
 # SUPER + CONTROL KEYS
@@ -502,23 +502,23 @@ super + shift + Down
 
 # Focus/swap windows by direction
 super + ctrl + {Left,Down,Up,Right}
-	bspc node --{focus} {west,south,north,east}
+    bspc node --{focus} {west,south,north,east}
 
 # Contract tiled space
 super + ctrl + {h,j,k,l}
-	bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
+    bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
 
 # Focus parent/brother/first/second for preselection
 super + ctrl + {e,r,t,y}
-	bspc node --focus @{parent,brother,first,second}
+    bspc node --focus @{parent,brother,first,second}
 
 # Preselect the splitting area for next window on leaf/parent
 super + ctrl + {u,i,o,p}
-	bspc node --presel-dir \~{west,south,north,east}
+    bspc node --presel-dir \~{west,south,north,east}
 
 # Define splitting ratio for next window on leaf/parent
 super + ctrl + {_,shift +}{1-9}
-	bspc node {_,@/} --presel-ratio 0.{1-9}
+    bspc node {_,@/} --presel-ratio 0.{1-9}
 
 
 #################################################################
@@ -527,15 +527,15 @@ super + ctrl + {_,shift +}{1-9}
 
 #Focus selected desktop
 alt + Tab
-	bspc desktop -f '^{1-9,10}'
+    bspc desktop -f '^{1-9,10}'
 
-	#Focus selected desktop
+    #Focus selected desktop
 alt + shift + Tab
-	bspc desktop -f '^{1-9,10}'
+    bspc desktop -f '^{1-9,10}'
 
 #Rotate desktop
 alt + space
-	bspc node @/ --rotate {90,-90}
+    bspc node @/ --rotate {90,-90}
 
 #################################################################
 # ALT + SHIFT KEYS
@@ -543,7 +543,7 @@ alt + space
 
 # Expand tiled space
 alt + shift + {h,j,k,l}
-	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
+    bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
 
 #################################################################
 # CTRL + ALT KEYS
@@ -551,19 +551,19 @@ alt + shift + {h,j,k,l}
 
 # Focus next/previous window
 ctrl + alt + Left
-	bspc node --focus west
+    bspc node --focus west
 
 # Focus next/previous window
 ctrl + alt + Right
-	bspc node --focus east
+    bspc node --focus east
 
 # Focus Up window
 ctrl +alt + Up
-	bspc node --focus north
+    bspc node --focus north
 
 # Focus Down window
 ctrl + alt + Down
-	bspc node --focus south
+    bspc node --focus south
 
 #################################################################
 #################################################################
@@ -574,13 +574,13 @@ ctrl + alt + Down
 #Switch here between qwerty and azerty or make new one
 #Focus selected desktop FOR QWERTY KEYBOARDS
 super + {1-9,0}
-	bspc desktop -f '^{1-9,10}'
+    bspc desktop -f '^{1-9,10}'
 
-#Focus selected desktop	FOR BELIGIAN AZERTY KEYBOARDS
+#Focus selected desktop FOR BELIGIAN AZERTY KEYBOARDS
 #super + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,exclam,ccedilla,agrave}
 #    bspc desktop -f '^{1-9,10}'
 
-#Focus selected desktop	FOR FRNECH AZERTY KEYBOARDS
+#Focus selected desktop FOR FRNECH AZERTY KEYBOARDS
 #super + {ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,ccedilla,agrave}
 #    bspc desktop -f '^{1-9,10}'
 
