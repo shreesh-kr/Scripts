@@ -39,7 +39,7 @@ format-offset =
 
 [colors]
 ; Nord theme ============
-background = #2F343F
+background = #070a0014
 foreground = #f3f4f5
 alert = #d08770
 volume-min = #a3be8c
@@ -381,7 +381,7 @@ modules-right = filesystem
 
 ################################################################################
 ################################################################################
-############                  MAINBAR-BSPWM                         ############
+############                  BSPWM                         ############
 ################################################################################
 ################################################################################
 
@@ -429,9 +429,9 @@ font-1 = "FontAwesome:size=13;0"
 font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
-modules-left = bspwm xwindow networkspeeddown networkspeedup
-modules-center = spotify1
-modules-right = pavolume memory2 cpu2 date battery xbacklight
+modules-left = xwindow
+modules-center = bspwm
+modules-right =  date battery temperature2
 
 tray-detached = false
 tray-offset-x = 0
@@ -1240,31 +1240,31 @@ enable-scroll = true
 reverse-scroll = true
 pin-workspaces = true
 
-ws-icon-0 = 1;1
-ws-icon-1 = 2;2
-ws-icon-2 = 3;3
-ws-icon-3 = 4;4
-ws-icon-4 = 5;5
-ws-icon-5 = 6;6
-ws-icon-6 = 7;7
-ws-icon-7 = 8;8
-ws-icon-8 = 9;9
-ws-icon-9 = 10;10
+ws-icon-0 = 1;I
+ws-icon-1 = 2;II
+ws-icon-2 = 3;III
+ws-icon-3 = 4;IV
+ws-icon-4 = 5;V
+ws-icon-5 = 6;VI
+ws-icon-6 = 7;VII
+ws-icon-7 = 8;VIII
+ws-icon-8 = 9;IX
+ws-icon-9 = 10;X
 ws-icon-default = " "
-
 
 format = <label-state> <label-mode>
 
-label-focused = %icon%
+label-focused = 
 label-focused-background = ${colors.background}
-label-focused-underline= #6790eb
-label-focused-padding = 4
-label-focused-foreground = #6790EB
+label-focused-underline= #2b0057
+label-focused-padding = 2
+label-focused-foreground = #2b0057
 
 label-occupied = %icon%
 label-occupied-padding = 2
 label-occupied-background = ${colors.background}
-label-occupied-foreground = #6790EB
+label-occupied-foreground = #2b0057
+label-occupied-underline = #2b0057
 
 label-urgent = %icon%
 label-urgent-padding = 2
@@ -1273,30 +1273,30 @@ label-empty = %icon%
 label-empty-foreground = ${colors.foreground}
 label-empty-padding = 2
 label-empty-background = ${colors.background}
-label-monocle = "  "
-label-monocle-foreground = ${colors.foreground}
-label-tiled = "  "
-label-tiled-foreground = ${colors.foreground}
-label-fullscreen = "  "
-label-fullscreen-foreground = ${colors.foreground}
-label-floating = "  "
-label-floating-foreground = ${colors.foreground}
-label-pseudotiled = "  "
-label-pseudotiled-foreground = ${colors.foreground}
-label-locked = "  "
-label-locked-foreground = ${colors.foreground}
-label-sticky = "  "
-label-sticky-foreground = ${colors.foreground}
-label-private =  "     "
-label-private-foreground = ${colors.foreground}
+;label-monocle = "  "
+;label-monocle-foreground = ${colors.foreground}
+;label-tiled = "  "
+;label-tiled-foreground = ${colors.foreground}
+;label-fullscreen = "  "
+;label-fullscreen-foreground = ${colors.foreground}
+;label-floating = "  "
+;label-floating-foreground = ${colors.foreground}
+;label-pseudotiled = "  "
+;label-pseudotiled-foreground = ${colors.foreground}
+;label-locked = "  "
+;label-locked-foreground = ${colors.foreground}
+;label-sticky = "  "
+;label-sticky-foreground = ${colors.foreground}
+;label-private =  "     "
+;label-private-foreground = ${colors.foreground}
 
 ; Separator in between workspaces
 ;label-separator = |
-;label-separator-padding = 10
+label-separator-padding = 10
 ;label-separator-foreground = #ffb52a
 
 format-foreground = ${colors.foreground}
-format-background = ${colors.background}
+format-background = #176bd5
 
 
 ################################################################################
@@ -1384,13 +1384,13 @@ adapter = AC1
 full-at = 100
 
 format-charging = <animation-charging> <label-charging>
-label-charging =  %percentage%%
+label-charging = %percentage%%
 format-charging-foreground = ${colors.foreground}
 format-charging-background = ${colors.background}
 format-charging-underline = #a3c725
 
 format-discharging = <ramp-capacity> <label-discharging>
-label-discharging =  %percentage%%
+label-discharging = %percentage%%
 format-discharging-underline = #c7ae25
 format-discharging-foreground = ${colors.foreground}
 format-discharging-background = ${colors.background}
@@ -2001,7 +2001,7 @@ type = custom/script
 exec = ~/.config/polybar/scripts/tempcores.sh
 interval = 2
 format-padding = 1
-format-foreground = ${colors.foreground}
+format-foreground = #C1B93E
 format-background = ${colors.background}
 format-underline = #C1B93E
 format-prefix-foreground = #C1B93E
@@ -2214,7 +2214,8 @@ type = internal/xwindow
 ;   %title%
 ; Default: %title%
 label = %title%
-label-maxlen = 30
+label-padding = 3
+label-maxlen = 35
 
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
