@@ -21,7 +21,7 @@ $HOME/.config/polybar/launch.sh &
 
 #Some ways to set your wallpaper besides variety or nitrogen
 #feh --bg-scale ~/.config/bspwm/wall.png &
-feh --bg-fill /home/shreesh/Pictures/wallpapers/XFCE4.png &
+feh --bg-fill /usr/share/backgrounds/arcolinux/glorious-voyage-3840x2160.jpg &
 #feh --randomize --bg-fill ~/Képek/*
 #feh --randomize --bg-fill ~/Dropbox/Apps/Desktoppr/*
 

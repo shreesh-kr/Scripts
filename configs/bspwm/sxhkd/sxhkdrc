@@ -8,6 +8,10 @@
 #################################################################
 
 
+#firefox
+super + b
+	firefox
+
 #Spotify
 super + s
     spotify
@@ -30,7 +34,7 @@ super + t
 
 #alacritty
 super + Return
-    alacritty
+    urxvt
 
 #Xkill
 super + Escape
@@ -292,7 +296,7 @@ alt + shift + Tab
     bspc desktop -f '^{1-9,10}'
 
 #Rotate desktop
-alt + space
+ctrl + space
     bspc node @/ --rotate {90,-90}
 
 #################################################################
