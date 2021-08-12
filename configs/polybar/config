@@ -423,8 +423,8 @@ border-color = #00000000
 padding-left = 0
 padding-right = 1
 
-module-margin-left = 3
-module-margin-right = 3
+module-margin-left = 2
+module-margin-right = 2
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Noto Sans:size=10;2"
@@ -434,7 +434,7 @@ font-3 = "Noto Sans Mono:size=10;2"
 
 modules-left = xwindow
 modules-center = bspwm
-modules-right =  date battery
+modules-right = date battery
 
 tray-detached = true
 tray-offset-x = -175
@@ -2096,7 +2096,7 @@ tail = true
 [module/wired-network]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
-interface = enp4s0
+interface = wlp2so
 ;interface = enp14s0
 interval = 3.0
 
@@ -2128,7 +2128,7 @@ label-disconnected-foreground = ${colors.foreground}
 [module/wireless-network]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
-interface = wlp3s0
+interface = wlp2s0
 interval = 3.0
 label-connected = %essid%
 
@@ -2137,9 +2137,9 @@ format-connected = <label-connected>
 format-connected-foreground = ${colors.foreground}
 format-connected-background = ${colors.background}
 format-connected-prefix = "  "
-format-connected-prefix-foreground = #7e52c6
+;format-connected-prefix-foreground = #7e52c6
 format-connected-prefix-background = ${colors.background}
-format-connected-underline = #7e52c6
+;format-connected-underline = #7e52c6
 
 label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.alert}
