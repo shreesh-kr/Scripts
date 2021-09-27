@@ -42,7 +42,7 @@ format-offset =
 
 [colors]
 ; Nord theme ============
-background = #70000000
+background = #131c26
 foreground = #fff
 alert = #d08770
 volume-min = #a3be8c
@@ -85,7 +85,7 @@ width = 100%
 height = 22
 ;offset-x = 75%
 ;offset-y = 1%
-radius = 6.0
+radius = 0.0
 fixed-center = true
 bottom = false
 ;separator = |
@@ -123,12 +123,12 @@ font-2 = "Noto Sans:size=10;2"
 font-3 = "Noto Sans Mono:size=10;2"
 font-4 = "Font Awesome 5 Free:style=Solid:size=12;2"
 
-modules-left =  date xwindow
-modules-center = bspwm
-modules-right = battery
+modules-left =  bspwm
+modules-center = xwindow
+modules-right =  date battery
 
 tray-detached = true
-tray-offset-x = -65
+tray-offset-x = -190
 tray-offset-y = 0
 tray-padding = 2
 tray-maxsize = 20
@@ -207,6 +207,65 @@ modules-left = bspwm
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 
+################################################################################
+################################################################################
+############                    MAINBAR-OPENBOX                     ############
+################################################################################
+################################################################################
+
+[bar/mainbar-openbox]
+monitor = ${env:MONITOR}
+;monitor-fallback = HDMI1
+width = 100%
+height = 24
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = true
+bottom = false
+separator = |
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #f00
+
+;border-size = 2
+;border-left-size = 25
+;border-right-size = 25
+;border-top-size = 0
+;border-bottom-size = 25
+;border-color = #00000000
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 3
+module-margin-right = 3
+; Enable support for inter-process messaging
+; See the Messaging wiki page for more details.
+enable-ipc = true
+
+;https://github.com/jaagr/polybar/wiki/Fonts
+font-0 = "Noto Sans:size=10;2"
+font-1 = Font Awesome 5 Free:size=10;3
+font-2 = "Noto Sans:size=10;2"
+font-3 = "Noto Sans Mono:size=10;2"
+font-4 = "Font Awesome 5 Free:style=Solid:size=12;3"
+
+modules-left = ewmh
+modules-center = xwindow
+modules-right = date battery
+
+tray-detached = false
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 2
+tray-maxsize = 20
+tray-scale = 1.0
+tray-position = right
+tray-background = ${colors.background}
 
 
 ################################################################################
