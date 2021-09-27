@@ -1,0 +1,10 @@
+# autostart applications
+
+nitrogen --restore &
+#tint2 /home/shreesh/Downloads/themes/tint2-theme-collections/repentance/repentance.tint2rc &
+picom --config ~/.config/bspwm/picom.conf &
+sxhkd -c ~/.config/openbox/sxhkd/sxhkdrc &
+volumeicon&
+#ulauncher --hide-window&
+nm-applet&
+~/.config/polybar/launch.sh --shades&
