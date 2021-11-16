@@ -29,20 +29,20 @@ $HOME/.config/polybar/launch.sh &
 xsetroot -cursor_name left_ptr &
 run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 
-conky -c ~/.config/conky/syclo/center-conky-crimson-nobg.conkyrc &
-conky -c ~/.config/conky/syclo/crimson-nobg-onlyinfo-bl.conkyrc &
+#conky -c ~/.config/conky/syclo/center-conky-crimson-nobg.conkyrc &
+#conky -c ~/.config/conky/syclo/crimson-nobg-onlyinfo-bl.conkyrc &
 
-#run variety &
-run nm-applet &
+run variety &
+#run nm-applet &
 #run pamac-tray &
-run xfce4-power-manager &
+#run xfce4-power-manager &
 numlockx on &
-blueberry-tray &
+#blueberry-tray &
 picom --config ~/.config/bspwm/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 #run volumeicon &
-nitrogen --restore &
+#nitrogen --restore &
 #run caffeine &
 #run vivaldi-stable &
 #run teams &

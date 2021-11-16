@@ -1,3 +1,4 @@
+
 --[[
 #=====================================================================================
 #
@@ -70,7 +71,7 @@ maximum_width = 400,
 gap_x = 0,--## left | right
 gap_y = 40,--## up | down
 
-alignment = 'top_left',
+alignment = 'br',
 --######################  End Window Settings  ###
 --##  Font Settings  #############################
 -- Use Xft (anti-aliased font and stuff)

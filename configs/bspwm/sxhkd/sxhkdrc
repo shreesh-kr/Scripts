@@ -21,7 +21,7 @@ super + w
 
 #firefox
 super + b
-	firefox
+	brave
 
 #Spotify
 super + s
@@ -60,7 +60,7 @@ super + Escape
 
 #File-Manager
 super + shift + Return
-    nautilus
+    thunar
 
 
 #reload sxhkd:
