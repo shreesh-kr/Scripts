@@ -7,6 +7,28 @@
 # SUPER + ... KEYS
 #################################################################
 
+
+alt + z
+    xfce4-popup-whiskermenu
+
+
+super + shift + e
+    openbox --reconfigure
+
+
+super + x
+    ~/.config/openbox/rofi/bin/powermenu
+
+
+#NetworkManager Connection Editor
+super + n
+    nm-connection-editor
+
+
+BetterLockscreen suspend
+super + shift + q
+    betterlockscreen --suspend
+
 # pavolumue
 super + v
 	pavucontrol&
@@ -19,22 +41,23 @@ super + w
 	whatsapp-nativefier
 
 
-#firefox
+#browser
 super + b
-	firefox
+	brave
 
 #Spotify
 super + s
-    env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify %U
+    LD_PRELOAD=/usr/lib/spotify-adblock.so spotify %U
 
 
-# Dmenu
+
+#Rofi drun
 super + c
-    dmenu_run
-
+#    rofi -show drun -theme $HOME/.config/rofi/default/launcher.rasi
+    xfce4-appfinder -c
 # Rofi run
-#super + z
-#    xfce4-popup-whiskermenu
+super + z
+    rofi -show run -theme $HOME/.config/rofi/default/launcher.rasi
 
 #arcolinux-logout
 super + x
@@ -48,7 +71,7 @@ super + x
 
 #alacritty
 super + Return
-	alacritty  
+	alacritty
 
 #Xkill
 super + Escape
@@ -60,7 +83,7 @@ super + Escape
 
 #File-Manager
 super + shift + Return
-    thunar
+    pcmanfm
 
 
 #reload sxhkd:
@@ -73,7 +96,7 @@ super + shift + s
 
 #Xfce4-appfinder
 alt + F3
-    xfce4-appfinder
+    xfce4-appfinder -c
 
 #################################################################
 # CONTROL + SHIFT KEYS
@@ -116,11 +139,11 @@ F12
 
 #Raises volume
 XF86AudioRaiseVolume
-    amixer set Master 10%+
+    amixer set Master 5%+
 
 #Lowers volume
 XF86AudioLowerVolume
-    amixer set Master 10%-
+    amixer set Master 5%-
 
 #Mute
 XF86AudioMute
@@ -252,8 +275,11 @@ super + {_,shift + }{h,j,k,l}
     bspc node --{focus,swap} {west,south,north,east}
 
 # Flip layout vertically/horizontally
-super + {_,shift + }a
-    bspc node @/ --flip {vertical,horizontal}
+super + ctrl + a
+    bspc node @/ --flip vertical
+
+super + shift + a
+    bspc node @/ --flip horizontal
 
 # Move focused window to other monitor
 super + shift + Left
@@ -379,13 +405,3 @@ super + shift + {1-9,0}
 super + button{4,5}
   bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 2 ))
 
-
-
-
-# conky-rotate next
-super + Right
-	conky-rotate -n
-
-# conky-rotate previous
-super + Left
-	conky-rotate -p
