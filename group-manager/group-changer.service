@@ -1,0 +1,9 @@
+[Unit]
+Description=Group changer
+
+[Service]
+After=network.target
+ExecStart=/home/shreeshkv/projects/group-manager/group-changer.sh
+
+[Install]
+WantedBy=multi-user.target
