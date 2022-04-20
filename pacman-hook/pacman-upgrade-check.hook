@@ -1,0 +1,9 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+
+
+[Action]
+Description = 
+When PostTransaction
+Exec = /home/shreeshkv/projects/pacman-hook/upgrade.sh
